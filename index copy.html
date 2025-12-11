@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home – Robotics & Automation Notes</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Serif+Display&family=Fira+Code&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body data-page="home">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <!-- <span class="brand-mark"></span>
+        <span class="brand-text">Pacific <span>Bots</span></span> -->
+
+
+                <img src="images/gen-img-02.png" alt="Site Logo" class="brand-logo" />
+                <span class="brand-text">Robotics <span>Notebook</span></span>
+
+            </div>
+
+            <nav class="simple-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="blog.html" class="nav-item">Blogs</a>
+                <a href="tutorials.html" class="nav-item">Tutorials</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero hero--light">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="hero-tagline">Simple daily notes on robots, AI & projects.</p>
+                    <h1 class="hero-title">
+                        A calm place to write about <span>robotics</span> and <span>automation</span>.
+                    </h1>
+                    <p class="hero-subtitle">
+                        No heavy design. Just clean pages where you can post your
+                        daily blogs, code snippets, images, and videos related to robotics and AI.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="blog.html" class="btn-primary">Go to Blogs</a>
+                        <a href="tutorials.html" class="btn-outline">View Tutorials</a>
+                    </div>
+                </div>
+
+                <!-- <div class="hero-card">
+          <p class="hero-card-title">Today’s focus</p>
+          <ul class="hero-list">
+            <li>Blog 1 – Robotics (with images, code & video)</li>
+            <li>Blog 2 – AI and Automation</li>
+            <li>Tutorials – simple step-by-step notes</li>
+          </ul>
+          <p class="hero-card-note">
+            You can replace all sample content, images and videos
+            later with your own.
+          </p>
+        </div> -->
+
+
+                <div class="hero-card">
+                    <p class="hero-card-title">Today’s focus</p>
+
+                    <!-- Recent items will be injected here by JS -->
+                    <ul class="hero-list" id="hero-recent-list">
+                        <li>Loading recent posts...</li>
+                    </ul>
+
+                    <p class="hero-card-note">
+                        These are the 3 latest posts (blogs or videos). Add new entries to your
+                        content file and this list will update automatically.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container simple-grid">
+                <div>
+                    <h2 class="section-title">What this website is for</h2>
+                    <p class="section-text">
+                        This template is meant for daily writing. You can open the
+                        HTML files and simply duplicate sections for each new blog or tutorial.
+                    </p>
+                </div>
+                <div class="pill-grid">
+                    <div class="pill-box">
+                        <h3 class="pill-title">Daily blogs</h3>
+                        <p class="pill-text">
+                            Write quickly about what you built, learned, or broke in robotics.
+                        </p>
+                    </div>
+                    <div class="pill-box">
+                        <h3 class="pill-title">Code + video</h3>
+                        <p class="pill-text">
+                            Show the final result using images and simple embedded videos.
+                        </p>
+                    </div>
+                    <div class="pill-box">
+                        <h3 class="pill-title">Tutorials</h3>
+                        <p class="pill-text">
+                            Short, clear tutorials that your future self can follow again.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Simple robotics blog template – edit freely.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

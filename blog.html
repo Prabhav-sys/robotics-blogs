@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs – Robotics & Automation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Serif+Display&family=Fira+Code&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body data-page="blogs">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <!-- <img src="assets/logo.png" alt="Site Logo" class="brand-logo" /> -->
+                <img src="images/gen-img-02.png" alt="Site Logo" class="brand-logo" />
+                <span class="brand-text">Robotics <span>Notebook</span></span>
+            </div>
+
+            <nav class="simple-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="blog.html" class="nav-item">Blogs</a>
+                <a href="tutorials.html" class="nav-item">Tutorials</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Blogs</h1>
+                <p class="page-subtitle">
+                    Short overview of each post. Click “Read full blog” to view the detailed page
+                    with videos, images and code snippets.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container blog-layout">
+                <!-- Blog 1 card -->
+                <article class="blog-article">
+                    <p class="blog-label">Blog 1 • Robotics</p>
+                    <h2 class="blog-heading">Building a simple robotics project</h2>
+                    <p class="blog-meta">
+                        A basic robotics build that moves, stops, and turns using simple logic.
+                    </p>
+
+                    <div class="blog-content">
+                        <p>
+                            This post covers how I started with a very simple robot, focusing on
+                            movement and basic control. It’s meant to be easy to follow and build.
+                        </p>
+                        <a href="blog-01-robotics.html" class="btn-primary blog-read-btn">
+                            Read full blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 card -->
+                <article class="blog-article">
+                    <p class="blog-label">Blog 2 • AI & Automation</p>
+                    <h2 class="blog-heading">AI and automation in my projects</h2>
+                    <p class="blog-meta">
+                        Notes on where I use AI models and automation scripts in robotics work.
+                    </p>
+
+                    <div class="blog-content">
+                        <p>
+                            This blog focuses on how AI and automation help to read sensors,
+                            detect obstacles, and make simple decisions for robots.
+                        </p>
+                        <a href="blog-02-ai-automation.html" class="btn-primary blog-read-btn">
+                            Read full blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Placeholder for future blogs -->
+                <p class="small-note">
+                    To add another blog, copy one <code>&lt;article class="blog-article"&gt;</code>
+                    block above, change the text and link it to a new page like
+                    <code>blog-03-something.html</code>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Blogs page – click into any blog to see full details.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

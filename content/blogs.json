@@ -1,0 +1,35 @@
+[
+  {
+    "id": 3,
+    "title": "AI and automation in my projects",
+    "type": "Blog",
+    "tag": "AI & Automation",
+    "date": "2025-12-11",
+    "description": "Using simple AI models and automation with my robotics work.",
+    "imageUrl": "https://via.placeholder.com/900x400?text=AI+%26+Automation+Image",
+    "videoId": "59JTCvpG_Ec",
+    "code": "# sample Python style code...\n\n"
+  },
+  {
+    "id": 2,
+    "title": "Building a simple robotics project",
+    "type": "Blog",
+    "tag": "Robotics",
+    "date": "2025-12-10",
+    "description": "Small robot that moves forward, stops, and turns.",
+    "imageUrl": "https://via.placeholder.com/900x400?text=Robotics+Image+Here",
+    "videoId": "ZEir102PxJ8",
+    "code": "// sample Arduino style code...\n\n"
+  },
+  {
+    "id": 1,
+    "title": "Robotics in 2025 – Where I start",
+    "type": "Tutorial",
+    "tag": "Tutorial",
+    "date": "2025-12-09",
+    "description": "My starting point for robotics in 2025.",
+    "imageUrl": "",
+    "videoId": "ZEir102PxJ8",
+    "code": ""
+  }
+]

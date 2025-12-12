@@ -17,6 +17,9 @@
     <script src="script.js" defer></script>
 </head>
 
+
+
+
 <body data-page="home">
     <header class="site-header">
         <div class="container header-inner">
@@ -128,6 +131,21 @@
             <p>Simple robotics blog template – edit freely.</p>
         </div>
     </footer>
+
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 </body>
 
 </html>

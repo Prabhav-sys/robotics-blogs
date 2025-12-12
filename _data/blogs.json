@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "title": "Building a simple robotics project",
+    "type": "Blog",
+    "tag": "Robotics",
+    "date": "2025-12-10",
+    "description": "Small robot that moves forward, stops, and turns.",
+    "imageUrl": "/images/tech-01.png",
+    "videoId": "ZEir102PxJ8",
+    "code": "// sample Arduino style code...\n\n",
+    "url": "/blog-01-robotics/"
+  },
+  {
+    "id": 3,
+    "title": "AI and automation in my projects",
+    "type": "Blog",
+    "tag": "AI & Automation",
+    "date": "2025-12-11",
+    "description": "Using simple AI models and automation with my robotics work.",
+    "imageUrl": "/images/tech-01.png",
+    "videoId": "59JTCvpG_Ec",
+    "code": "# sample Python style code...\n\n",
+    "url": "/blog-02-ai-automation-02/"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "robotics-blogs",
+  "version": "1.0.0",
+  "description": "this is a new website on robotics",
+  "main": "script.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prabhav-sys/robotics-blogs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Prabhav-sys/robotics-blogs/issues"
+  },
+  "homepage": "https://github.com/Prabhav-sys/robotics-blogs#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

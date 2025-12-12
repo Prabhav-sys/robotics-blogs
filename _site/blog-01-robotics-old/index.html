@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog 1 – Building a simple robotics project</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Serif+Display&family=Fira+Code&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body data-page="blogs">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/images/gen-img-02.png" alt="Site Logo" class="brand-logo" />
+        <span class="brand-text">Robotics <span>Notebook</span></span>
+      </div>
+
+      <nav class="simple-nav">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/blog/" class="nav-item">Blogs</a>
+        <a href="/tutorials/" class="nav-item">Tutorials</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="container">
+        <p class="breadcrumb">
+         <a href="/blog/">← Back to Blogs</a>
+
+        </p>
+        <h1 class="page-title">Building a simple robotics project</h1>
+        <p class="page-subtitle">
+          Blog 1 • Robotics • Full details with image, video and code snippet.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-detail">
+        <article class="blog-article">
+          <div class="blog-content">
+            <p>
+              In this project, I am building a very simple robot that can move forward,
+              stop and turn. The goal is not to make something perfect, but to keep
+              making progress every day and understand the basics of motion control.
+            </p>
+
+            <p>
+              The setup includes a small chassis, two DC motors, a motor driver and a
+              basic microcontroller (you can imagine Arduino/ESP/etc.). The idea is:
+              send commands, see the result, and adjust.
+            </p>
+
+            <figure class="blog-figure">
+              <img src="/images/tech-01.jpg" alt="Robotics project image" />
+              <figcaption>
+                Placeholder image – replace this with your real robot photo.
+              </figcaption>
+            </figure>
+
+            <h2 class="detail-heading">Demo video</h2>
+            <p>
+              Below is a sample video you can use as a reference. Later, you can
+              replace the video with your own demo.
+            </p>
+
+            <div class="video-wrapper">
+              <!-- Sample video for project 1 -->
+              <iframe src="https://www.youtube.com/embed/ZEir102PxJ8" title="Robotics project demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+
+            <h2 class="detail-heading">Code snippet</h2>
+            <p>
+              Click the button below to show or hide the code used to control the robot.
+            </p>
+
+            <button class="btn-outline toggle-code-btn" data-target="code-robotics-1">
+              Show code snippet
+            </button>
+
+            <pre id="code-robotics-1" class="code-block is-hidden"><code>// sample pseudo robotics code
+int speed = 150;
+
+void setup() {
+  setupMotors();
+}
+
+void loop() {
+  moveForward(speed);
+  delay(1000);
+
+  stopMotors();
+  delay(500);
+
+  turnRight(speed);
+  delay(700);
+
+  stopMotors();
+}</code></pre>
+
+            <p>
+              You can replace this pseudo code with your real Arduino/Python/C++ code.
+              The important part is the structure: the code is hidden at first and
+              only appears when you click the button.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Blog 1 – full robotics project details.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

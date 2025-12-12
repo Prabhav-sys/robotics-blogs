@@ -1,0 +1,104 @@
+---
+permalink: "/tutorials/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials – Robotics & Projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Serif+Display&family=Fira+Code&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body data-page="tutorials">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/images/gen-img-02.png" alt="Site Logo" class="brand-logo" />
+        <span class="brand-text">Robotics <span>Notebook</span></span>
+      </div>
+
+      <nav class="simple-nav">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/blog/" class="nav-item">Blogs</a>
+        <a href="/tutorials/" class="nav-item">Tutorials</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Tutorials</h1>
+        <p class="page-subtitle">
+          Simple step-by-step tutorials, each with a video and notes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tutorial-list">
+
+        {# tutorials comes from _data/tutorials.json #}
+        {% for post in tutorials | reverse %}
+          <article class="tutorial-card">
+            <p class="tutorial-label">
+              Tutorial {{ loop.index }}
+            </p>
+
+            <h2 class="tutorial-title">{{ post.title }}</h2>
+
+            <p class="tutorial-text">
+              {{ post.description }}
+            </p>
+
+            <p class="small-note" style="margin-bottom: 0.6rem;">
+              {{ post.date }} • {{ post.tag }}
+            </p>
+
+            {% if post.videoId %}
+              <p class="tutorial-text" style="margin-top: 0.4rem;">
+                Video for this tutorial:
+              </p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/{{ post.videoId }}"
+                  title="{{ post.title }} - tutorial video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            {% endif %}
+
+            <a href="{{ post.url }}" class="btn-primary blog-read-btn">
+              Open full tutorial page
+            </a>
+          </article>
+        {% endfor %}
+
+        <p class="small-note">
+          To add more tutorials, add objects in
+          <code>_data/tutorials.json</code> (and optionally a combined entry in
+          <code>content/blogs.json</code> if you want them to show in the home
+          “Most recent” list).
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Tutorials page – keep it as your learning path.</p>
+    </div>
+  </footer>
+</body>
+</html>

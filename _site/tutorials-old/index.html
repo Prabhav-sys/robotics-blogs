@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorials – Robotics & Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Serif+Display&family=Fira+Code&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+</head>
+
+<body data-page="tutorials">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <!-- <span class="brand-mark"></span>
+        <span class="brand-text">Robotics <span>Notebook</span></span> -->
+
+                <img src="/images/gen-img-02.png" alt="Site Logo" class="brand-logo" />
+                <span class="brand-text">Robotics <span>Notebook</span></span>
+            </div>
+
+            <nav class="simple-nav">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/blog/" class="nav-item">Blogs</a>
+                <a href="/tutorials/" class="nav-item">Tutorials</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Tutorials</h1>
+                <p class="page-subtitle">
+                    Simple step-by-step tutorials. No fancy graphics, just clear writing and videos.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container tutorial-list">
+                <!-- Tutorial 1 -->
+                <article class="tutorial-card">
+                    <p class="tutorial-label">Tutorial 1</p>
+                    <h2 class="tutorial-title">Robotics in 2025 – Where I start</h2>
+                    <p class="tutorial-text">
+                        In this tutorial, I outline how I see robotics in 2025 – available hardware,
+                        cheap sensors, open-source libraries, and what is realistic to build as a
+                        student or solo developer.
+                    </p>
+                    <ol class="simple-steps">
+                        <li>Decide one small project (line follower, arm, or simple rover).</li>
+                        <li>Pick components that are easy to buy around you.</li>
+                        <li>Choose one language/platform (Arduino, ROS, Python, etc.).</li>
+                        <li>Break the project into tiny tasks and write daily notes here.</li>
+                    </ol>
+
+                    <p class="tutorial-text" style="margin-top: 0.8rem;">
+                        Below is a video you can use as a reference or sample for this tutorial.
+                        You can change this video later to your own or any other resource.
+                    </p>
+
+                    <div class="video-wrapper">
+                        <!-- Tutorial 1 video: https://youtu.be/ZEir102PxJ8 -->
+                        <iframe src="https://www.youtube.com/embed/ZEir102PxJ8" title="Robotics in 2025 - sample video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- Tutorial 2 -->
+                <article class="tutorial-card">
+                    <p class="tutorial-label">Tutorial 2</p>
+                    <h2 class="tutorial-title">Working on a project – simple flow</h2>
+                    <p class="tutorial-text">
+                        This tutorial is just a simple workflow I can follow whenever I
+                        start any robotics or automation project.
+                    </p>
+                    <ol class="simple-steps">
+                        <li>Write down the goal in one clear sentence.</li>
+                        <li>Draw a very rough block diagram (inputs → processing → outputs).</li>
+                        <li>Setup basic hardware and test each part individually.</li>
+                        <li>Combine hardware with simple code first, then improve step by step.</li>
+                        <li>Record short videos and paste them into blogs or tutorials.</li>
+                    </ol>
+
+                    <p class="tutorial-text" style="margin-top: 0.8rem;">
+                        Here is another sample video for this tutorial. Replace it later with
+                        your own project video if you like.
+                    </p>
+
+                    <div class="video-wrapper">
+                        <!-- Tutorial 2 video: https://youtu.be/59JTCvpG_Ec -->
+                        <iframe src="https://www.youtube.com/embed/59JTCvpG_Ec"
+                            title="Working on a project - sample video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <p class="small-note">
+                    To add more tutorials, copy one
+                    <code>&lt;article class="tutorial-card"&gt;</code> block, edit the title,
+                    steps, and update the <code>src</code> of the <code>&lt;iframe&gt;</code>
+                    with a new YouTube link.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Tutorials page – keep it as your learning path.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

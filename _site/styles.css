@@ -1,0 +1,528 @@
+/* ========== Base ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #fff7f2;       /* peach / almond */
+  --bg-card: #fff3e6;
+  --bg-soft: #ffe7d4;
+  --accent: #f38a5b;        /* warm coral, not blue */
+  --accent-soft: #ffe0cf;
+  --text-main: #4b3428;     /* warm brown */
+  --text-soft: #8b6b57;
+  --border-soft: #f0c9aa;
+  --radius: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ========== Layout helpers ========== */
+.container {
+  width: min(960px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.main {
+  padding-top: 4.5rem;
+}
+
+.section {
+  padding: 2.75rem 0;
+}
+
+/* ========== Header & simple nav ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 247, 242, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(240, 201, 170, 0.6);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-logo {
+  height: 36px;              /* Adjust depending on your logo */
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-text span {
+  color: var(--accent);
+}
+
+
+/* .brand-mark {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #f9734a, #e15b3c);
+} */
+
+
+.brand-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px; /* optional, for softer edges */
+}
+.brand-text {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.1rem;
+}
+
+.brand-text span {
+  color: var(--accent);
+}
+
+.simple-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text-soft);
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.15s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-item.active {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* ========== Hero ========== */
+.hero {
+  padding: 2.5rem 0 2.25rem;
+}
+
+.hero--light {
+  background: linear-gradient(
+    135deg,
+    #fff7f2 0%,
+    #ffe8d7 35%,
+    #fff7f2 100%
+  );
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+.hero-text {
+  max-width: 32rem;
+}
+
+.hero-tagline {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  font-size: 0.96rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.96rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fffaf6;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--border-soft);
+}
+
+.hero-card-title {
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.hero-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.hero-card-note {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+/* ========== Simple section styles ========== */
+.simple-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .simple-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+  }
+}
+
+.section-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-text {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.pill-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .pill-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.pill-box {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-soft);
+}
+
+.pill-title {
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.pill-text {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* ========== Page headers (Blogs, Tutorials) ========== */
+.page-header {
+  padding: 1.8rem 0 1.2rem;
+}
+
+.page-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.page-subtitle {
+  font-size: 0.96rem;
+  color: var(--text-soft);
+}
+
+/* ========== Blogs layout ========== */
+.blog-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.blog-article {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  border: 1px solid var(--border-soft);
+}
+
+.blog-label {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 0.2rem;
+}
+
+.blog-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 0.8rem;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.blog-figure {
+  margin: 0 0 0.9rem 0;
+}
+
+.blog-figure img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+}
+
+.blog-figure figcaption {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin-top: 0.35rem;
+}
+
+/* Code blocks */
+.code-block {
+  background: var(--bg-soft);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--border-soft);
+  margin-bottom: 0.9rem;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.84rem;
+}
+
+/* Videos */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 0.9rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Small note */
+.small-note {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+/* ========== Tutorials ========== */
+.tutorial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.tutorial-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  padding: 1.3rem 1.4rem;
+}
+
+.tutorial-label {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 0.2rem;
+}
+
+.tutorial-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.tutorial-text {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin-bottom: 0.7rem;
+}
+
+.simple-steps {
+  padding-left: 1.2rem;
+}
+
+.simple-steps li {
+  font-size: 0.94rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  border-top: 1px solid rgba(240, 201, 170, 0.7);
+  padding: 1.3rem 0 1.6rem;
+  margin-top: 1.5rem;
+  background: #fff5ef;
+}
+
+.footer-inner {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* ========== Misc ========== */
+a {
+  color: inherit;
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+
+/* this is for new added blogs pages */
+/* Breadcrumb for detail pages */
+.breadcrumb {
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--text-soft);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+/* Detail layout */
+.blog-detail {
+  max-width: 760px;
+}
+
+.detail-heading {
+  font-size: 1.15rem;
+  margin: 1.1rem 0 0.4rem;
+}
+
+/* Read full blog button spacing on list page */
+.blog-read-btn {
+  margin-top: 0.6rem;
+  display: inline-flex;
+}
+
+/* Hidden code block */
+.code-block.is-hidden {
+  display: none;
+}
+/* End of new added blogs pages styles */

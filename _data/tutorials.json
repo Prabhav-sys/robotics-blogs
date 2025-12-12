@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Robotics in 2025 – Where I start",
+    "type": "Tutorial",
+    "tag": "Getting started",
+    "date": "2025-12-09",
+    "description": "How I see robotics in 2025 – available hardware, cheap sensors, open-source libraries, and what is realistic to build as a student or solo dev.",
+    "imageUrl": "",
+    "videoId": "ZEir102PxJ8",
+    "code": "",
+    "url": "/tutorials/robotics-2025/"
+  },
+  {
+    "id": 2,
+    "title": "Working on a project – simple flow",
+    "type": "Tutorial",
+    "tag": "Workflow",
+    "date": "2025-12-10",
+    "description": "A simple workflow I can follow whenever I start any robotics or automation project.",
+    "imageUrl": "",
+    "videoId": "59JTCvpG_Ec",
+    "code": "",
+    "url": "/tutorials/project-flow/"
+  }
+]
